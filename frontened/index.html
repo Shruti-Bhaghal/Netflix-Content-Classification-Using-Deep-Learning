@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Recommender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>🎬 Movie Recommender</h1>
+    <p>Pick a movie you like and get similar suggestions powered by a neural network.</p>
+
+    <form id="recommend-form" autocomplete="off">
+      <input
+        type="text"
+        id="movie-input"
+        list="movie-list"
+        placeholder="Type a movie name, e.g. Avatar"
+        required
+      />
+      <datalist id="movie-list"></datalist>
+      <button type="submit" id="submit-btn">Recommend</button>
+    </form>
+  </header>
+
+  <main>
+    <p id="status" class="status" role="status"></p>
+    <section id="results" class="grid"></section>
+  </main>
+
+  <footer>
+    <small>Built with an ANN-based recommendation model</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
